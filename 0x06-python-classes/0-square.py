@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-#0-square.py by Danladi Etu
 """Defines a square """
 
 
-class square:
+
+class Square:
     """Does nothing"""
     pass
