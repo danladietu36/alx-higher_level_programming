@@ -1,18 +1,22 @@
 #!/usr/bin/python3
-"""Module to find the max integer in a list
+"""This module contains a function that adds numbers
 """
 
 
-def max_integer(list=[]):
-    """Function to find and return the max integer in a list of integers
-        If the list is empty, the function returns None
-    """
-    if len(list) == 0:
-        return None
-    result = list[0]
-    i = 1
-    while i < len(list):
-        if list[i] > result:
-            result = list[i]
-        i += 1
-    return result
+def add_integer(a, b=98):
+    """This function adds two integers"""
+    if type(a) is float:
+        a = int(a)
+    if type(b) is float:
+        b = int(b)
+    if type(a) is not int:
+        raise TypeError("a must be an integer")
+    if type(b) is not int:
+        raise TypeError("b must be an integer")
+    if a >= 2 ** 62:
+        raise OverflowError("a is too large")
+    if b >= 2 ** 62:
+        raise OverflowError("b is too large")
+    if (a + b) >= (2 ** 62):
+        raise OverflowError("result is too large")
+    return a + b
