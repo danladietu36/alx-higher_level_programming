@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-This module contain a function that indents texts
+This module contain a function that indents texts.
 
 """
 
@@ -11,7 +11,7 @@ def text_indentation(text):
         text(str): The string to be printed
 
     Raises:
-        TypeError("text must be a string")
+        TypeError("text must be a string").
 
     """
 

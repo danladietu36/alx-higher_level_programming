@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-This module contains a function that prints a name
+This module contains a function that prints a name.
 
 """
 
@@ -13,7 +13,7 @@ def say_my_name(first_name, last_name=""):
         last_name(str): The last name to be printed
 
     Raises:
-        TypeError: If either the first and last name are not strings
+        TypeError: If either the first and last name are not strings.
     """
 
     if not isinstance(first_name, str):

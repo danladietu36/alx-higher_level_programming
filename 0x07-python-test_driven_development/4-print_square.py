@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-This module contain a function that prints a square
+This module contain a function that prints a square.
 
 """
 
@@ -13,8 +13,8 @@ def print_square(size):
 
     Raises:
         TypeError: If size is not an integer
-        TypeError: If size is a float and less tahn zero
-        ValueError: If size is less than zero
+        TypeError: If size is a float and less than zero
+        ValueError: If size is less than zero.
 
     """
     if not isinstance(size, int):
