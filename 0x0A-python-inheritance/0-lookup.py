@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""
-    This module returns the list of available attributes
-    and methods of an object.
-"""
+"""This module defines a text file-reading function"""
 
-def lookup(obj):
-    """This functions looks out for all attributes and methods of an object."""
-    return dir(obj)
+
+def read_file(filename=""):
+    """Prints the contents of a UTF8 text file"""
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
