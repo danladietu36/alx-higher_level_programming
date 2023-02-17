@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module contains a class to serve as base for other classes."""
+"""This module contains a class to serve as base for other classes"""
+
 
 import csv
 import json
@@ -8,7 +9,7 @@ import turtle
 
 
 class Base:
-    """Represents base of all classes created."""
+    """Represents base of all classes created """
 
     __nb_objects = 0
 
@@ -19,17 +20,18 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Function to returns the JSON representation of list_dictionaries"""
-        if list_dictionaries is None or list_dictionaries = []:
+        """returns the JSON representation of list_dictionaries"""
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        if (type(list_dictionaries != list or not all(type(i) == dict for i in list_dictionaries)):
-                raise TypeError("list_dictionaries must be a list of dictionaries")
-                return json.dumps(list_dictionaries)
+        if (type(list_dictionaries) != list or not
+                all(type(i) == dict for i in list_dictionaries)):
+            raise TypeError("list_dictionaries must be a list of dictionaries")
+        return json.dumps(list_dictionaries)
 
-     @classmethod
+    @classmethod
     def save_to_file(cls, list_objs):
         """Save JSON representation to file"""
         file_name = cls.__name__ + ".json"
@@ -52,7 +54,7 @@ class Base:
 
         return json_string_list
 
-     @classmethod
+    @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set"""
         # create an instance of an existing class
@@ -64,8 +66,7 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-
-     @classmethod
+    @classmethod
     def load_from_file(cls):
         """Returns a list of instances"""
 
@@ -80,7 +81,6 @@ class Base:
                 for dictionary in list_dictionaries:
                     list_of_instances.append(cls.create(**dictionary))
         return list_of_instances
-
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
