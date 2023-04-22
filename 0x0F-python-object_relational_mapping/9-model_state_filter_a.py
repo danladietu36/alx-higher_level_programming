@@ -20,7 +20,7 @@ if __name__ == '__main__':
     engine = create_engine(db_url)
     session = sessionmaker(bind=engine)
 
-    session = session()
+    session = Session()
 
     states = session.query(State).filter(State.name.contains('a'))
     if state is not None:
