@@ -17,7 +17,8 @@ if __name__ == "__main__":
     """
 
     db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
-            argv[1], argv[2], argv[3])
+        argv[1], argv[2], argv[3])
+
     engine = create_engine(db_url)
     Session = sessionmaker(bind=engine)
 
@@ -29,5 +30,4 @@ if __name__ == "__main__":
         print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.commit()
-
     session.close()
