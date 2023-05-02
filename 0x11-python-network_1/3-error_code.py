@@ -12,8 +12,10 @@ import urllib.error
 if __name__ == '__main__':
     url = sys.argv[1]
 
+
+    req = urllib.request.Request(url)
     try:
-        with urllib.request.Request(url) as response:
+        with urllib.request.Request(req) as response:
             response_body = response_body.read().decode('utf-8')
             print(response_body)
     except urllib.error.HTTPError as e:
