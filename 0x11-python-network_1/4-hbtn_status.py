@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Python script that fetches https://alx-intranet.hbtn.io/status
-using the requests package
+using the requests package.
 """
 import requests
 
@@ -10,5 +10,5 @@ if __name__ == '__main__':
     url_response = requests.get(url)
 
     print('Body response:')
-    print('\t- type: {}'.format(type(response_body)))
-    print('\t- content: {}'.format(response_body))
+    print('\t- type: {}'.format(type(url_response)))
+    print('\t- content: {}'.format(url_response))
