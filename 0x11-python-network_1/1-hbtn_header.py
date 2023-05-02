@@ -3,7 +3,7 @@
 and displays the value of the X-Request-Id
 """
 import sys
-import urlib.request
+import urllib.request
 
 
 if __name__ == '__main__':
