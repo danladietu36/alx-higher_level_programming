@@ -7,21 +7,23 @@ You must use the GitHub API, here is the documentation
 https://developer.github.com/v3/repos/commits/
 Print all commits by: `<sha>: <author name>` (one by line).
 """
-import requests
+#!/usr/bin/python3
+"""lists the 10 most recent commits on a given GitHub repository.
+"""
 import sys
+import requests
 
-repo_name = sys.argv[1]
-owner_name = sys.argv[2]
 
-url = f'https://api.github.com/repos/{owner_name}/{repo_name}/commits'
+if __name__ == "__main__":
+    url = "https://api.github.com/repos/{}/{}/commits".format(
+        sys.argv[2], sys.argv[1])
 
-response = requests.get(url)
-
-if response.status_code == 200:
-    commits = response.json()[:10]
-    for commit in commits:
-        sha = commit['sha']
-        author = commit['commit']['author']['name']
-        print(f'{sha}: {author}')
-else:
-    print(f'Error: {response.status_code}')
+    response = requests.get(url)
+    comms = response.json()
+    try:
+        for x in range(10):
+            print("{}: {}".format(
+                comms[i].get("sha"),
+                comms[i].get("commit").get("author").get("name")))
+    except IndexError:
+        pass
