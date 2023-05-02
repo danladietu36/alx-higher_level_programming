@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module to find PEAK in a list of unsorted integers
+""" Module to find PEAK in a list of unsorted integers.
 """
 
 
@@ -7,7 +7,7 @@ def find_peak(list_of_integers):
     """
     Arguments:
         list_of_integers(int)
-    Return: None or Peak
+    Return: None or Peak.
     """
     size = len(list_of_integers)
     mid_el = size
