@@ -7,9 +7,6 @@ You must use the GitHub API, here is the documentation
 https://developer.github.com/v3/repos/commits/
 Print all commits by: `<sha>: <author name>` (one by line).
 """
-#!/usr/bin/python3
-"""lists the 10 most recent commits on a given GitHub repository.
-"""
 import sys
 import requests
 
